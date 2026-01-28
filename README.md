@@ -6,6 +6,7 @@ To get started:
 
 ```
 python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.sample .env
 python config/llm_config.py 
