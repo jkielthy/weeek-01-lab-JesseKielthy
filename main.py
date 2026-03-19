@@ -1,5 +1,12 @@
-import os
 from dotenv import load_dotenv
+import os
+
+env_path = r"C:/Users/Admin/Desktop/Jesse/SETU/lab-01/.env"
+print("Loading from:", env_path)
+
+# print("LLM_PROVIDER:", os.getenv("LLM_PROVIDER"))
+# print("LLM_MODEL:", os.getenv("LLM_MODEL"))
+
 from llm_factory import create_llm
 
 # Load environment variables from .env
@@ -29,7 +36,8 @@ def test_llm_connection():
 
 
 def simple_prompt():
-    prompt = "Write a short poem about the ocean."
+    prompt = "On a scale of 1 to 10, how likely are Liverpool FC going to win the league?"
+    print(prompt)
     response = llm.invoke(prompt)
 
     print("Model Response:")
@@ -43,3 +51,4 @@ if __name__ == "__main__":
 
     print("Running simple prompt...")
     simple_prompt()
+
